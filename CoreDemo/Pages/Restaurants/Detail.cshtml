@@ -1,0 +1,34 @@
+﻿@page "{restaurantId:int}"
+
+@model CoreDemo.Pages.Restaurants.DetailModel
+@{
+    ViewData["Title"] = "Detail";
+}
+
+
+<a class="btn btn-lg" asp-page="./List">
+    <i class="glyphicon glyphicon-arrow-left "></i>
+</a>
+
+@if (Model.Message != null)
+{
+    <div class="alert alert-info">@Model.Message</div>
+
+}
+
+
+<h2>@Model.Restaurant.Name</h2>
+<div>
+    Id: @Model.Restaurant.Id
+</div>
+<div>
+    Location: @Model.Restaurant.Location
+</div>
+<div>
+    Cuisine: @Model.Restaurant.Cuisine
+</div>
+
+
+
+
+
